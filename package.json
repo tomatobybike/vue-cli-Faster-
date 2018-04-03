@@ -1,7 +1,7 @@
 {
-  "name": "manage-system",
+  "name": "基于Vue.js 2.x系列 + element-ui CMS 优化打包",
   "version": "2.1.0",
-  "description": "基于Vue.js 2.x系列 + element-ui CMS",
+  "description": "基于Vue.js 2.x系列 + element-ui CMS 优化打包",
   "author": "汤姆",
   "private": true,
   "scripts": {
