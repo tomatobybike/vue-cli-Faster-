@@ -1,6 +1,6 @@
 <template>
     <div class="login-wrap">
-        <div class="ms-title">后台管理系统</div>
+        <div class="ms-title">优化打包 空模板</div>
         <div class="ms-login">
             <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px" class="demo-ruleForm">
                 <el-form-item prop="username">
@@ -12,45 +12,44 @@
                 <div class="login-btn">
                     <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
                 </div>
-                <p style="font-size:12px;line-height:30px;color:#999;">Tips : 用户名和密码随便填。</p>
             </el-form>
         </div>
     </div>
 </template>
 
 <script>
-    export default {
-        data: function(){
-            return {
-                ruleForm: {
-                    username: '',
-                    password: ''
-                },
-                rules: {
-                    username: [
-                        { required: true, message: '请输入用户名', trigger: 'blur' }
-                    ],
-                    password: [
-                        { required: true, message: '请输入密码', trigger: 'blur' }
-                    ]
-                }
-            }
+  export default {
+    data: function () {
+      return {
+        ruleForm: {
+          username: '',
+          password: ''
         },
-        methods: {
-            submitForm(formName) {
-                const self = this;
-                self.$refs[formName].validate((valid) => {
-                    if (valid) {
-                        localStorage.setItem('ms_username',self.ruleForm.username);
-                        self.$router.push('/readme');
-                    } else {
-                        console.log('error submit!!');
-                        return false;
-                    }
-                });
-            }
+        rules: {
+          username: [
+            { required: true, message: '请输入用户名', trigger: 'blur' }
+          ],
+          password: [
+            { required: true, message: '请输入密码', trigger: 'blur' }
+          ]
         }
+      }
+    },
+    methods: {
+      submitForm (formName) {
+        const self = this
+        self.$refs[formName].validate((valid) => {
+          if (valid) {
+            localStorage.setItem('ms_username', self.ruleForm.username)
+            self.$router.push('/readme')
+          } else {
+            console.log('error submit!!')
+            return false
+          }
+        })
+      }
     }
+  }
 </script>
 
 <style scoped>
